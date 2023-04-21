@@ -45,6 +45,8 @@ For more info related to this change see [#88](https://github.com/rafamadriz/fri
 
 Use your plugin manager of choice, e.g.
 
+#### With Packer
+
 ```lua
 -- Lazy
 -- https://github.com/folke/lazy.nvim
@@ -64,6 +66,24 @@ use "kevinm6/the_snippets"
 
 -- Plug
 Plug "kevinm6/the_snippets"
+```
+
+#### With Lazy.nvim
+
+**PLEASE NOTE:** If you're using [Lazy](https://github.com/folke/lazy.nvim), you must add ```friendly-snippets``` as an nvim-cmp dependency, otherwise it may be loaded after other plugins. See [this issue](https://github.com/rafamadriz/friendly-snippets/issues/239#issue-1553567010) and [this issue](https://github.com/folke/lazy.nvim/issues/266#issuecomment-1368271202) for more information. As an example:
+
+```lua
+
+return {
+  'hrsh7th/cmp-nvim-lsp',
+  dependencies = {
+	  'rafamadriz/friendly-snippets',
+	  'L3MON4D3/LuaSnip',
+  },
+  config = function()
+    -- the rest of your configuration
+  end
+}
 ```
 
 #### HTML
@@ -103,3 +123,4 @@ A good portion of the snippets have been forked from the following repositories:
 - [VSCode-LaTeX-Snippets](https://github.com/JeffersonQin/VSCode-LaTeX-Snippets)
 - [vscode-react-javascript-snippets](https://github.com/dsznajder/vscode-react-javascript-snippets)
 - [honza/vim-snippets - Verilog](https://github.com/honza/vim-snippets/blob/master/snippets/verilog.snippets)
+- [vscode-relm4-snippets](https://github.com/Relm4/vscode-relm4-snippets)
