@@ -318,7 +318,7 @@
   },
 	"Left Arrow": {
     "prefix": "larr",
-    "body": [ "&larr;", "<-" ],
+    "body": [ "&larr;" ],
 		"description": "Insert Left Arrow"
   },
 	"Up Arrow": {
