@@ -1,4 +1,4 @@
-# The Snippets
+# Snippets
 
 Snippets collection for a set of different programming languages.
 
@@ -13,39 +13,39 @@ Use your plugin manager of choice, e.g.
 ### With Lazy.nvim
 
 ```lua
-{ "rafamadriz/friendly-snippets" }
+{ "kevinm6/snippets" }
 ```
 
 > [!WARNING]
 > If you're using LuaSnip make sure to use
 > `require("luasnip.loaders.from_vscode").lazy_load()`, and add
-> `friendly-snippets` as a dependency for LuaSnip, otherwise snippets might not
+> `snippets` as a dependency for LuaSnip, otherwise snippets might not
 > be detected. If you don't use `lazy_load()` you might notice a slower
 > startup-time
 >
 > ```lua
 > {
 >   "L3MON4D3/LuaSnip",
->   dependencies = { "rafamadriz/friendly-snippets" },
+>   dependencies = { "kevinm6/snippets" },
 > }
 > ```
 
 ### With Packer
 
 ```lua
-use "rafamadriz/friendly-snippets"
+use "kevinm6/snippets"
 ```
 
 ### With vim-plug
 
 ```vim
-Plug "rafamadriz/friendly-snippets"
+Plug "kevinm6/snippets"
 ```
 
 ### With coc.nvim
 
 ```vim
-:CocInstall https://github.com/rafamadriz/friendly-snippets@main
+:CocInstall https://github.com/kevinm6/snippets@main
 ```
 
 ## Usage
@@ -64,7 +64,7 @@ loading vscode snippets. Like for example:
 
 There's extra snippets included in this repo but they are not added by default,
 since it would be irrelevant for people not using those frameworks. See
-[`snippets/frameworks`](https://github.com/rafamadriz/friendly-snippets/tree/main/snippets/frameworks)
+[`snippets/frameworks`](https://github.com/kevinm6/snippets/tree/main/snippets/frameworks)
 
 For example: if you want to add rails snippets to ruby.
 
@@ -95,17 +95,17 @@ With LuaSnip, see `help luasnip-loaders`
   event = "InsertEnter",
   dependencies = {
     -- set as dependencies to be loaded when nvim-cmp is loaded
-    "kevinm6/the_snippets"
+    "kevinm6/snippets"
     -- "hrsh7th/cmp-nvim-lsp",
     -- "hrsh7th/cmp-buffer",
   },
 }
 
 -- Packer
-use "kevinm6/the_snippets"
+use "kevinm6/snippets"
 
 -- Plug
-Plug "kevinm6/the_snippets"
+Plug "kevinm6/snippets"
 ```
 
 #### With Lazy.nvim
@@ -117,7 +117,7 @@ Plug "kevinm6/the_snippets"
 return {
   'hrsh7th/cmp-nvim-lsp',
   dependencies = {
-	  'rafamadriz/friendly-snippets',
+	  'kevinm6/snippets',
 	  'L3MON4D3/LuaSnip',
   },
   config = function()
@@ -143,7 +143,7 @@ return {
 
 ## Thanks to all contributors
 
-<a href="https://github.com/rafamadriz/friendly-snippets/graphs/contributors">
+<a href="https://github.com/kevinm6/snippets/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=rafamadriz/friendly-snippets" />
 </a>
 

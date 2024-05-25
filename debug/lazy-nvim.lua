@@ -23,7 +23,7 @@ vim.opt.runtimepath:prepend(lazypath)
 -- install plugins
 -- modify according to which snippet engine,etc you're using
 local plugins = {
-	"rafamadriz/friendly-snippets",
+	"kevinm6/snippets",
 	{
 		-- snippet engine is necessary to load snippets
 		"L3MON4D3/LuaSnip",

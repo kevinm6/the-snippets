@@ -1,8 +1,5 @@
 {
-   "name": "the-snippets",
-   "engines": {
-      "vscode": "^1.11.0"
-   },
+   "name": "snippets",
    "contributes": {
       "snippets": [
          {
@@ -14,7 +11,7 @@
                "global",
                "all"
             ],
-            "path": "./snippets/global.json"
+            "path": "./snippets/all.json"
          },
          {
             "language": [
