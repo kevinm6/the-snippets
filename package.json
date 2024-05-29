@@ -101,6 +101,10 @@
             "path": "./snippets/lua/luadoc.json"
          },
          {
+            "language": "nvim_lua",
+            "path": "./snippets/lua/nvim_lua.json"
+         },
+         {
             "language": "go",
             "path": "./snippets/go.json"
          },
