@@ -16,8 +16,40 @@ Use your plugin manager of choice, e.g.
 { "kevinm6/snippets" }
 ```
 
-> [!WARNING]
-> If you're using LuaSnip make sure to use
+<details>
+<summary><b>Neovim (native)</b></summary>
+
+> ⚠️ 
+> Requirements:    
+>  - **nvim** >= 0.10  
+>  - [nvim-snippets](https://github.com/garymjr/nvim-snippets)  
+>  - **nvim** commit [f1775da](https://github.com/neovim/neovim/commit/f1775da07fe48da629468bcfcc2a8a6c4c3f40ed)  
+> ```lua
+> -- Example config
+> {
+>   "garymjr/nvim-snippets",
+>   event = "InsertEnter",
+>   dependencies = { "kevinm6/snippets" },
+   >   opts = function(_, o)
+>     o.extended_filetypes = {
+>       javascript = { "jsdoc" },
+>       lua = { "luadoc" },
+>       java = { "javadoc", "java-testing" },
+>       quarto = { "markdown" },
+>    }
+>
+>    o.search_paths = { vim.fn.stdpath "data" .. "/lazy/snippets"  }
+>   end
+> }
+> ```
+
+</details>
+
+<details>
+<summary><b>LuaSnip</b></summary>
+
+> ⚠️ WARNING  
+> If you're using **LuaSnip** make sure to use  
 > `require("luasnip.loaders.from_vscode").lazy_load()`, and add
 > `snippets` as a dependency for LuaSnip, otherwise snippets might not
 > be detected. If you don't use `lazy_load()` you might notice a slower
@@ -30,17 +62,25 @@ Use your plugin manager of choice, e.g.
 > }
 > ```
 
+</details>
+
+---
+
 ### With Packer
 
 ```lua
 use "kevinm6/snippets"
 ```
 
+---
+
 ### With vim-plug
 
 ```vim
 Plug "kevinm6/snippets"
 ```
+
+---
 
 ### With coc.nvim
 
@@ -53,6 +93,7 @@ Plug "kevinm6/snippets"
 This collection of snippets should work with any snippet engine that supports
 loading vscode snippets. Like for example:
 
+- [vim.snippet](https://github.com/neovim/neovim/pull/25301)
 - [vim-vsnip](https://github.com/hrsh7th/vim-vsnip)
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 - [coc-snippets](https://github.com/neoclide/coc-snippets)

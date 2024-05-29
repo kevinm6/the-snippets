@@ -1,32 +1,19 @@
 {
-	"Date": {
+  "Date": {
     "prefix": "date",
-    "body": [
-      "${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}"
-    ],
-    "description": ""
+    "body": ["${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR}"],
+    "description": "Current Date"
   },
-	"Date&Time": {
+  "Date&Time": {
     "prefix": "datetime",
     "body": [
       "${CURRENT_DATE}/${CURRENT_MONTH}/${CURRENT_YEAR} - ${CURRENT_HOUR}:${CURRENT_MINUTE}"
     ],
-    "description": "Date and time stamp"
+    "description": "Date and Time stamp"
   },
   "Time": {
     "prefix": "time",
-    "body": [
-      "${CURRENT_HOUR}:${CURRENT_MINUTE}"
-    ],
+    "body": ["${CURRENT_HOUR}:${CURRENT_MINUTE}"],
     "description": "Timestamp"
-  },
-	"TOC": {
-		"prefix": "toc",
-		"body": [
-			"# TOC",
-			"- ${1}",
-			"  - ${2}"
-		],
-		"description": "Table of Contents"
-	}
+  }
 }
